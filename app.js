@@ -19,7 +19,45 @@ app.get("/",(req,res)=>{
     
  });
  
+ function getDate(){
 
+    let sendDate;
+    let today = new Date().getDay();
+  
+    switch (today) {
+        case 0:
+            sendDate = "Sunday";
+            break;
+        case 1:
+            sendDate = "Monday";
+            break;
+            
+        case 2:
+            sendDate = "Tuesday";
+            break;
+            
+        case 3:
+            sendDate = "Wednesday";
+            break;    
+    
+        case 4:
+            sendDate = "Thursday";
+            break;
+            
+        case 5:
+            sendDate = "Friday";
+            break;
+            
+        case 6:
+            sendDate = "Saturday";
+            break;
+  
+        default:
+            console.log(today);
+    }
+  
+    return sendDate;
+  }
 app.listen(3000,()=>{
     console.log("server started on port 3000");
 });
