@@ -11,3 +11,8 @@ app.use(express.urlencoded({
 app.set('view engine', 'ejs');
 //to say that we are using static files in the public folder
 app.use(express.static("public"));
+
+
+app.listen(3000,()=>{
+    console.log("server started on port 3000");
+});
